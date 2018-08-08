@@ -7,9 +7,51 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
   </head>
 
   <body>
+    <div class="navbar-wagon">
+      <a href="/" class="navbar-wagon-brand">
+        <img src="images/logo.png" alt="logo">
+      </a>
+
+      <!-- Right Navigation -->
+      <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
+
+        <!-- Profile picture with dropdown list -->
+        <div class="navbar-wagon-item">
+          <div class="dropdown">
+            <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dropdown appearing on mobile only -->
+      <div class="navbar-wagon-item hidden-md hidden-lg">
+        <div class="dropdown">
+          <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><a href="#">Host</a></li>
+            <li><a href="#">Trips</a></li>
+            <li><a href="#">Messagese</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
